@@ -40,7 +40,8 @@ namespace ODataBugSelectName.Controllers
     {
         public MyProfile()
         {
-            CreateMap<MyEntity, MyResponse>();
+            CreateMap<MyEntity, MyResponse>()
+                .ForAllMembers(x => x.ExplicitExpansion());
         }
     }
 }
